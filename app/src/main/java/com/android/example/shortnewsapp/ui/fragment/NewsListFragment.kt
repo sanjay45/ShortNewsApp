@@ -47,18 +47,10 @@ class NewsListFragment : BaseFragment<FragmentNewsListBinding>() {
         viewModel.newsListLiveData.observe(viewLifecycleOwner) {
             binding.progressBar.gone()
             when (it) {
-                is NetworkResult.Success -> {
-                    newsListAdapter.submitList(it.data?.toMutableList())
-                }
-                is NetworkResult.Error -> {
-                    Toast.makeText(requireContext(), "${it.message}", Toast.LENGTH_LONG).show()
-                }
-                is NetworkResult.Loading -> {
-                  binding.progressBar.visible()
-                }
-                is NetworkResult.NetworkError -> {
-                    Toast.makeText(requireContext(), "no internet connection", Toast.LENGTH_LONG).show()
-                }
+                is NetworkResult.Success -> { newsListAdapter.submitList(it.data?.toMutableList()) }
+                is NetworkResult.Error -> {  Toast.makeText(requireContext(), "${it.message}", Toast.LENGTH_LONG).show() z]
+                is NetworkResult.Loading -> { binding.progressBar.visible() }
+                is NetworkResult.NetworkError -> {Toast.makeText(requireContext(), "no internet connection", Toast.LENGTH_LONG).show() }
             }
         }
     }
