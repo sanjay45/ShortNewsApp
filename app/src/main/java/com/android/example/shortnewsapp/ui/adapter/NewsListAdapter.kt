@@ -1,4 +1,4 @@
-package com.android.example.shortnewsapp.adapter
+package com.android.example.shortnewsapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

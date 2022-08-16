@@ -1,7 +1,6 @@
 package com.android.example.shortnewsapp.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.android.example.shortnewsapp.R
-import com.android.example.shortnewsapp.adapter.NewsListAdapter
+import com.android.example.shortnewsapp.ui.adapter.NewsListAdapter
 import com.android.example.shortnewsapp.databinding.FragmentNewsListBinding
 import com.android.example.shortnewsapp.models.Article
 import com.android.example.shortnewsapp.ui.viewmodel.NewsViewModel
