@@ -22,6 +22,10 @@ class NewsViewModel @Inject constructor(private val newsRepository: NewsReposito
     val articleLiveData: LiveData<Article>
         get() = _articleLiveData
 
+    init {
+        getNews()
+    }
+
     fun getNews() {
         _newsListLiveData.value = NetworkResult.Loading()
         viewModelScope.launch {

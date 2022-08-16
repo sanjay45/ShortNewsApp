@@ -31,7 +31,6 @@ class NewsListFragment : BaseFragment<FragmentNewsListBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerView()
         setObservers()
-        viewModel.getNews()
     }
 
     private fun setUpRecyclerView() {

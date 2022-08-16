@@ -21,14 +21,11 @@ class NewsDetailFragment : BaseFragment<FragmentNewsDetailBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setContentView()
-
     }
 
     private fun setContentView() {
         viewModel.articleLiveData.observe(viewLifecycleOwner) {
-            Glide.with(this)
-                .load(it.imageUrl)
-                .into(binding.ivNews)
+            Glide.with(this).load(it.imageUrl).into(binding.ivNews)
         }
     }
 

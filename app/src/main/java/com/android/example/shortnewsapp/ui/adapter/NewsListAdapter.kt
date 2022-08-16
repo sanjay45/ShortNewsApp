@@ -30,9 +30,7 @@ class NewsListAdapter(private val onClickListener: (Article) -> Unit): ListAdapt
 
         fun bind(article: Article) {
             binding.tvTitle.text = article.title
-            Glide.with(binding.root)
-                .load(article.imageUrl)
-                .into(binding.ivArticleImage)
+            Glide.with(binding.root).load(article.imageUrl).into(binding.ivArticleImage)
 
         }
     }
