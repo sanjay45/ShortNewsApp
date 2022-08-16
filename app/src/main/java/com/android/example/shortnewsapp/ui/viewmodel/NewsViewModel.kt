@@ -20,7 +20,7 @@ class NewsViewModel @Inject constructor(private val newsRepository: NewsReposito
 
     private val _articleLiveData = MutableLiveData<Article>()
     val articleLiveData: LiveData<Article>
-    get() = _articleLiveData
+        get() = _articleLiveData
 
     fun getNews() {
         _newsListLiveData.value = NetworkResult.Loading()
