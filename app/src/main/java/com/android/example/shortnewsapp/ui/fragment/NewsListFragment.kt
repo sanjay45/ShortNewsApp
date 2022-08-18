@@ -24,8 +24,7 @@ class NewsListFragment : BaseFragment<FragmentNewsListBinding>() {
 
     private lateinit var newsListAdapter: NewsListAdapter
 
-    override fun getLayoutBinding(inflater: LayoutInflater, container: ViewGroup?) =
-        FragmentNewsListBinding.inflate(inflater, container, false)
+    override fun getLayoutBinding(inflater: LayoutInflater, container: ViewGroup?) = FragmentNewsListBinding.inflate(inflater, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
